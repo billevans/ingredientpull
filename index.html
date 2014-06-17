@@ -37,10 +37,17 @@ $('#firstbutton').click(function()
 
 // jquery get value of input
 
-var writing = $("#textbox").val();
 $(document).ready(function(){
     $('#firstbutton').click(function(){
-        alert($('#textbox').val()) ;
+    	var writing = $('#textbox').val()
+    	var leng = $("#writing").length;
+    	console.log(writing)
+    	if (leng < 1){
+    		alert("no data");
+    	}
+    	else{
+    		alert(writing);
+    	}
     });
 
 })
