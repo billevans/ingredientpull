@@ -17,15 +17,33 @@
 <body>
 <h1>
 	Ingredients Magic
+
 	</h1>
 	<hr/>
-	<input type="text"/>
+	<input type="text" id="textbox"/>
 	<button id="firstbutton" class="bluebutton"> click here </button>
-	<button class="bluebutton"> click here </button>
+	<button class="bluebutton"> click here2 </button>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 $('#firstbutton').hide();
 $('#firstbutton').fadeIn(5000);
+console.log($('#firstbutton').text());
+// jquery onclick of button, alert
+
+$('#firstbutton').click(function()
+{
+	alert('button clicked')
+});
+
+// jquery get value of input
+
+var writing = $("#textbox").val();
+$(document).ready(function(){
+    $('#firstbutton').click(function(){
+        alert($('#textbox').val()) ;
+    });
+
+})
 </script>
 
 
