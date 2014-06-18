@@ -1,8 +1,9 @@
 <html>
 <head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css"> 
 	<style>
 	h1{
-		color: #990000;
+		color: #6B2D77;
 	}
 	button#firstbutton{
 		color: #000099;
@@ -10,47 +11,54 @@
 	.bluebutton{
 		font-size:16px;
 	}
+	body{
+		background-color: #CFCF98;
+	}
 	</style>
 
 
 </head>
 <body>
-<h1>
-	Ingredients Magic
+<div class="container">
+<div class="jumbotron">
+  <h1>Ingredients Magic</h1>
+  <p>This is a tool for quickly finding the nutritional values of your favourite foods.</p>
+</div>
 
+<!--old header
+<h1 align="center">
+	Ingredients Magic
 	</h1>
 	<hr/>
-	<input type="text" id="textbox"/>
-	<button id="firstbutton" class="bluebutton"> click here </button>
-	<button class="bluebutton"> click here2 </button>
+-->
+
+
+<!--creates input box and button-->
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Find Nutrition</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
+
+
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+
+//set textbox message
+$("#textbox").val('type ingredient here')
 $('#firstbutton').hide();
 $('#firstbutton').fadeIn(5000);
 console.log($('#firstbutton').text());
-// jquery onclick of button, alert
 
-$('#firstbutton').click(function()
-{
-	alert('button clicked')
-});
 
-// jquery get value of input
 
-$(document).ready(function(){
-    $('#firstbutton').click(function(){
-    	var writing = $('#textbox').val()
-    	var leng = $("#writing").length;
-    	console.log(writing)
-    	if (leng < 1){
-    		alert("no data");
-    	}
-    	else{
-    		alert(writing);
-    	}
-    });
-
-})
 </script>
 
 
