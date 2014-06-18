@@ -2,17 +2,12 @@
 <head>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css"> 
 	<style>
-	h1{
-		color: #6B2D77;
-	}
-	button#firstbutton{
-		color: #000099;
-	}
-	.bluebutton{
-		font-size:16px;
-	}
 	body{
 		background-color: #CFCF98;
+	}
+
+	.right{
+		float: right;
 	}
 	</style>
 
@@ -61,37 +56,46 @@
 
 
 <!--creates input box and button-->
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" value="Enter ingredient here">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Find Nutrition</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
+
+<div style="float:left; width:50%;" class="container">
+	<div class="row">
+ 	 	<div class="col-lg">
+   			<div class="input-group">
+   	  			 <input type="text" 
+   	  	 			class="form-control" 
+   	  	 			value="Enter ingredient here">
+     			 <span class="input-group-btn">
+       				 <button class="btn btn-default" type="button">Find Nutrition</button>
+     			 </span>
+   			 </div><!-- /input-group -->
+  			</div><!-- /.col-lg-6 -->
+  		</div>
+  	<!--box for answers-->
+  	<div class="panel panel-default">
+		<div class="panel-heading">
+			Your results will appear below
+		</div>
+		<div class="panel-body">
+			<li>per 100g</li>
+			<li>7g protein</li>
+			<li>6g fat</li>
+			<li>87g carbohydrates</li>
+			<li>3g dietary fiber</li>
+		</div>
+	</div>
 </div><!-- /.row -->
 
 
-
-
-
-<!--box for answers-->
-
-<div class="panel panel-default">
-	<div class="panel-heading">
-		Your results will appear below
-	</div>
-	<div class="panel-body">
-		<li>per 100g</li>
-		<li>7g protein</li>
-		<li>6g fat</li>
-		<li>87g carbohydrates</li>
-		<li>3g dietary fiber</li>
+<!--picture box -->
+<div style="float:right; width:50%; align:center;" class="container">
+	<div class="row">
+		<div class="col-xs-6 col-lg-6">
+			<a href="#" class="thumbnail">
+      			<img data-src="holder.js/100%x180" alt="...">
+    		</a>
+		</div>
 	</div>
 </div>
-
-
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
@@ -111,4 +115,5 @@
 	Contact at github
 	</p>
 </footer>
+</div>
 </html>
