@@ -17,7 +17,8 @@
 <div class="container">
 <div class="jumbotron">
   <h1>Ingredients Magic</h1>
-  <p>This is a tool for quickly finding the nutritional values of your favourite foods.</p>
+  <p>This is a tool for quickly finding the nutritional values of your favourite foods.
+  Type carrot, brocolli, peas or beans</p>
 </div>
 
 
@@ -108,22 +109,20 @@ $(document).ready(function(){
 		
 		var foodInput = $('#foodSearch').val()
 		var listSize = $(foodArray).size()
+		var i = 0
+		var check = 0
 		console.log(foodInput)
 		console.log(listSize)
 		
-			for(var i=0; i<listSize; i++){
+			for(i=0; i<listSize; i++){
 				if(foodInput==foodArray[i]){
 					document.getElementById("results").innerHTML=foodProperties[i]
-				}
-				console.log(1)
+					check++
 			}
-
-//			if (foodInput==foodArray[0]) {
-//				document.getElementById("results").innerHTML=foodArray[0]
-//			}
-//			else{
-//				document.getElementById("results").innerHTML="Not Available"
-//			};
+		}
+		if(check==0){
+			document.getElementById("results").innerHTML="No data available"
+		}
 	})
 })
 
