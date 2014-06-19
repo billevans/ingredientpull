@@ -107,14 +107,26 @@ var foodArray=["carrot","brocolli","beans","peas"];
 
 $(document).ready(function(){
 	$('#foodButton').click(function(){
+		
 		var foodInput = $('#foodSearch').val()
+		var listSize = $(foodArray).size()
 		console.log(foodInput)
-			if (foodInput==foodArray[0,1,2,3]) {
-				document.getElementById("results").innerHTML=foodArray[0]
+		console.log(listSize)
+		
+			for(var i=0; i<listSize; i++){
+				console.log(1)
+				if(foodInput==foodArray[i]){
+					document.getElementById("results").innerHTML=foodArray[i]
+				}
+
 			}
-			else{
-				document.getElementById("results").innerHTML="Not Available"
-			};
+
+//			if (foodInput==foodArray[0]) {
+//				document.getElementById("results").innerHTML=foodArray[0]
+//			}
+//			else{
+//				document.getElementById("results").innerHTML="Not Available"
+//			};
 	})
 })
 
