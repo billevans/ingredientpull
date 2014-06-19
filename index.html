@@ -101,9 +101,7 @@
 
 
 var foodArray=["carrot","brocolli","beans","peas"];
-
-
-//document.getElementById("results").innerHTML=food[0]
+var foodProperties=["orange", "little tree", "long and green", "small and round"]
 
 $(document).ready(function(){
 	$('#foodButton').click(function(){
@@ -114,11 +112,10 @@ $(document).ready(function(){
 		console.log(listSize)
 		
 			for(var i=0; i<listSize; i++){
-				console.log(1)
 				if(foodInput==foodArray[i]){
-					document.getElementById("results").innerHTML=foodArray[i]
+					document.getElementById("results").innerHTML=foodProperties[i]
 				}
-
+				console.log(1)
 			}
 
 //			if (foodInput==foodArray[0]) {
