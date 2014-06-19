@@ -100,21 +100,27 @@
 <script>
 
 
-var food=["carrot","brocolli","beans"];
+var foodArray=["carrot","brocolli","beans","peas"];
 
 
 //document.getElementById("results").innerHTML=food[0]
 
-
-
 $(document).ready(function(){
 	$('#foodButton').click(function(){
-		document.getElementById("results").innerHTML=food[0]
-
-//		var foodInput = $('#foodSearch').val()
-//		console.log(foodInput)
+		var foodInput = $('#foodSearch').val()
+		console.log(foodInput)
+			if (foodInput==foodArray[0,1,2,3]) {
+				document.getElementById("results").innerHTML=foodArray[0]
+			}
+			else{
+				document.getElementById("results").innerHTML="Not Available"
+			};
 	})
 })
+
+
+
+
 
 
 
