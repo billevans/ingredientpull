@@ -1,4 +1,4 @@
-ijkingredientpull
+ingredientpull
 ==============
 
 gets ingredient nutritional values
