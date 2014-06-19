@@ -60,15 +60,17 @@
 	<div class="row">
  	 	<div class="col-lg">
    			<div class="input-group">
-   	  			 <input type="text" 
+   	  			 <input id="foodSearch" type="text" 
    	  	 			class="form-control" 
    	  	 			value="Enter ingredient here">
      			 <span class="input-group-btn">
-       				 <button class="btn btn-default" type="button">Find Nutrition</button>
+       				 <button id="foodButton" class="btn btn-default" type="button">Find Nutrition</button>
      			 </span>
    			 </div><!-- /input-group -->
   			</div><!-- /.col-lg-6 -->
   		</div>
+
+
   	<!--box for answers-->
   	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -76,11 +78,9 @@
 		</div>
 		<div class="panel-body">
 		<div class="container" style="float:left; width:50%;">
-			<li>per 100g</li>
-			<li>7g protein</li>
-			<li>6g fat</li>
-			<li>87g carbohydrates</li>
-			<li>3g dietary fiber</li>
+			<li id="results"> </li>
+
+		<!--picture box-->
 		</div>
 			<div style="float:right"; class="row";>
   				<div class="col-xs-6 col-md-3">
@@ -88,13 +88,33 @@
     				 <img data-src="next.jpg" alt="...">
    					</a>
   				</div>
+
+
 </div>
-	</div>
+</div>
+</div>
+
+
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 
 
+var food=["carrot","brocolli","beans"];
+
+
+//document.getElementById("results").innerHTML=food[0]
+
+
+
+$(document).ready(function(){
+	$('#foodButton').click(function(){
+		document.getElementById("results").innerHTML=food[0]
+
+//		var foodInput = $('#foodSearch').val()
+//		console.log(foodInput)
+	})
+})
 
 
 
